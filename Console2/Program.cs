@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Libreria2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,27 +12,27 @@ namespace Console2
         static void Main(string[] args)
         {
             Console.WriteLine("inserisci un numero");
+            int n1;
             try
             {
                 double n = double.Parse(Console.ReadLine());
-                int n1 = (int)n;
-                if (n == n1)
+                if(Utilità.VerificaIntero(n))
                 {
                     Console.WriteLine($"il numero {n} è intero");
+                    n1 = (int)n;
                 }
                 else
                 {
                     Console.WriteLine($"il numero {n} non è intero");
-                    n1 = (int)(n + 0.5);
+                     n1 = Utilità.Arrotonda(n);
                 }
-                if (n1 % 2 == 0)
+                if (Utilità.Pari_Dispari(n1))
                 {
-
-                    Console.WriteLine($"il numero{n1} è pari");
+                    Console.WriteLine($"il numero {n1} è pari");
                 }
                 else
                 {
-                    Console.WriteLine($"il numero{n1} è dispari");
+                    Console.WriteLine($"il numero {n1} è dispari");
                 }
                 
             }
