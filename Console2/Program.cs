@@ -15,23 +15,24 @@ namespace Console2
             {
                 double n = double.Parse(Console.ReadLine());
                 int n1 = (int)n;
-                if (n == 1)
+                if (n == n1)
                 {
                     Console.WriteLine($"il numero {n} è intero");
-                    if(n % 2 == 0)
-                    {
-                        Console.WriteLine($"il numero{n} è pari");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"il numero{n} è dispari");
-                    }
                 }
                 else
                 {
                     Console.WriteLine($"il numero {n} non è intero");
-
+                    n1 = (int)(n + 0.5);
                 }
+                if (n1 % 2 == 0)
+                {
+                    Console.WriteLine($"il numero{n1} è pari");
+                }
+                else
+                {
+                    Console.WriteLine($"il numero{n1} è dispari");
+                }
+                
             }
             catch (Exception e)
             {
