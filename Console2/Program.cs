@@ -26,6 +26,7 @@ namespace Console2
                 }
                 if (n1 % 2 == 0)
                 {
+
                     Console.WriteLine($"il numero{n1} è pari");
                 }
                 else
